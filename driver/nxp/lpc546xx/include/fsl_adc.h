@@ -377,8 +377,9 @@ void ADC_GetDefaultConfig(adc_config_t *config);
  * @retval true  Calibration succeed.
  * @retval false Calibration failed.
  */
+#if 0
 bool ADC_DoSelfCalibration(ADC_Type *base);
-
+#endif
 /*!
  * @brief Do the hardware offset-calibration.
  *

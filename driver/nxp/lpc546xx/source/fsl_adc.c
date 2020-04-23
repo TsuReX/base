@@ -200,6 +200,7 @@ void ADC_Deinit(ADC_Type *base)
  * @retval true  Calibration succeed.
  * @retval false Calibration failed.
  */
+#if 0
 bool ADC_DoSelfCalibration(ADC_Type *base)
 {
     uint32_t frequency = 0U;
@@ -253,7 +254,7 @@ bool ADC_DoSelfCalibration(ADC_Type *base)
 
     return ret;
 }
-
+#endif
 /*!
  * @brief Do the hardware offset-calibration.
  *
@@ -265,6 +266,7 @@ bool ADC_DoSelfCalibration(ADC_Type *base)
  * @retval true  Calibration succeed.
  * @retval false Calibration failed.
  */
+#if 0
 bool ADC_DoOffsetCalibration(ADC_Type *base, uint32_t frequency)
 {
     assert(frequency != 0U);
@@ -331,6 +333,7 @@ bool ADC_DoOffsetCalibration(ADC_Type *base, uint32_t frequency)
     base->CTRL = tmp32;
     return ret;
 }
+#endif
 #else
 /*!
  * @brief Do the hardware self-calibration.
